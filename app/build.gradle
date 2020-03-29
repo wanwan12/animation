@@ -9,6 +9,9 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
     }
     buildTypes {
         release {
@@ -16,9 +19,22 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        main {
+            assets.srcDirs = ['../assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation(name: 'egret', ext: 'aar')
 }

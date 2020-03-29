@@ -1,11 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:gravity="center"
+    android:orientation="horizontal">
 
-    <TextView
+    <View
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <FrameLayout
+        android:id="@+id/fl_animation"
+        android:layout_width="300px"
+        android:layout_height="230px" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="1000px"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_think"
+            android:layout_width="220px"
+            android:layout_height="100px"
+            android:text="think"
+            android:textSize="32px" />
+
+        <Button
+            android:id="@+id/btn_hello"
+            android:layout_width="220px"
+            android:layout_height="100px"
+            android:layout_marginLeft="30px"
+            android:layout_toRightOf="@id/btn_think"
+            android:text="hello"
+            android:textSize="32px" />
+    </RelativeLayout>
 
 </LinearLayout>
