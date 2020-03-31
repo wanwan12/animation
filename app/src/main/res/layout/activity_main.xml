@@ -30,16 +30,45 @@
             android:id="@+id/btn_think"
             android:layout_width="220px"
             android:layout_height="100px"
-            android:text="think"
+            android:text="思考"
             android:textSize="32px" />
 
         <Button
-            android:id="@+id/btn_hello"
+            android:id="@+id/btn_email"
             android:layout_width="220px"
             android:layout_height="100px"
             android:layout_marginLeft="30px"
             android:layout_toRightOf="@id/btn_think"
-            android:text="hello"
+            android:text="邮件"
+            android:textSize="32px" />
+
+        <Button
+            android:id="@+id/btn_music"
+            android:layout_width="220px"
+            android:layout_height="100px"
+            android:layout_marginLeft="30px"
+            android:layout_toRightOf="@id/btn_email"
+            android:text="音乐"
+            android:textSize="32px" />
+
+        <Button
+            android:id="@+id/btn_nod"
+            android:layout_width="220px"
+            android:layout_height="100px"
+            android:layout_marginTop="30px"
+            android:layout_below="@id/btn_think"
+            android:text="点头"
+            android:textSize="32px" />
+
+        <Button
+            android:id="@+id/btn_repair"
+            android:layout_width="220px"
+            android:layout_height="100px"
+            android:layout_marginTop="30px"
+            android:layout_below="@id/btn_think"
+            android:layout_marginLeft="30px"
+            android:layout_toRightOf="@id/btn_think"
+            android:text="维修"
             android:textSize="32px" />
     </RelativeLayout>
 

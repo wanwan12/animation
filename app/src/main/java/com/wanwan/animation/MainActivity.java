@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private final String TAG = "MainActivity";
     private EgretNativeAndroid nativeAndroid;
     private FrameLayout flAnimation;
-    private Button btnThink, btnHello;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +27,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         flAnimation = findViewById(R.id.fl_animation);
-        btnThink = findViewById(R.id.btn_think);
-        btnHello = findViewById(R.id.btn_hello);
 
-        btnThink.setOnClickListener(this);
-        btnHello.setOnClickListener(this);
+        findViewById(R.id.btn_think).setOnClickListener(this);
+        findViewById(R.id.btn_email).setOnClickListener(this);
+        findViewById(R.id.btn_music).setOnClickListener(this);
+        findViewById(R.id.btn_nod).setOnClickListener(this);
+        findViewById(R.id.btn_repair).setOnClickListener(this);
 
         nativeAndroid = new EgretNativeAndroid(this);
         if (!nativeAndroid.checkGlEsVersion()) {
@@ -99,9 +99,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if(v.getId() == R.id.btn_think){
             nativeAndroid.callExternalInterface("sendToJS", "think");
-        }else if(v.getId() == R.id.btn_hello){
-            nativeAndroid.callExternalInterface("sendToJS", "hello");
-//            nativeAndroid.callExternalInterface("sendToJS", bitmap);
+        }else if(v.getId() == R.id.btn_email){
+            nativeAndroid.callExternalInterface("sendToJS", "email");
+        }else if(v.getId() == R.id.btn_music){
+            nativeAndroid.callExternalInterface("sendToJS", "music");
+        }else if(v.getId() == R.id.btn_nod){
+            nativeAndroid.callExternalInterface("sendToJS", "nod");
+        }else if(v.getId() == R.id.btn_repair){
+            nativeAndroid.callExternalInterface("sendToJS", "repair");
         }
     }
 
