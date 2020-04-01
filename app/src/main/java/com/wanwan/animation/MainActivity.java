@@ -2,8 +2,10 @@ package com.wanwan.animation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -19,7 +21,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private final String TAG = "MainActivity";
     private EgretNativeAndroid nativeAndroid;
+    private View rootView;
     private FrameLayout flAnimation;
+    private int bgIndex = 0;
+    private int[] colorIds={R.color.red,R.color.blue,R.color.black,R.color.white};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         flAnimation = findViewById(R.id.fl_animation);
+        rootView = findViewById(R.id.root_view);
 
         findViewById(R.id.btn_think).setOnClickListener(this);
         findViewById(R.id.btn_email).setOnClickListener(this);
@@ -51,16 +57,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         nativeAndroid.config.disableNativeRender = false;
         nativeAndroid.config.clearCache = false;
         nativeAndroid.config.loadingTimeout = 0;
-
+        nativeAndroid.config.transparentGameView=true;
         setExternalInterfaces();
 
-        if (!nativeAndroid.initialize("http://tool.egret-labs.org/Weiduan/game/index.html")) {
+        if (!nativeAndroid.initialize("http://game/index.html")) {
             Toast.makeText(this, "Initialize native failed.",
                     Toast.LENGTH_LONG).show();
             return;
         }
         flAnimation.removeAllViews();
         flAnimation.addView(nativeAndroid.getRootFrameLayout());
+
     }
 
     @Override
@@ -102,6 +109,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        rootView.setBackgroundResource(colorIds[bgIndex]);
+        bgIndex++;
+        if(bgIndex>=colorIds.length){
+            bgIndex = 0;
+        }
         if(v.getId() == R.id.btn_think){
             nativeAndroid.callExternalInterface("changeAnimation", "think");
         }else if(v.getId() == R.id.btn_email){
