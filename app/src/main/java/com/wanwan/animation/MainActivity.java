@@ -33,6 +33,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_music).setOnClickListener(this);
         findViewById(R.id.btn_nod).setOnClickListener(this);
         findViewById(R.id.btn_repair).setOnClickListener(this);
+        findViewById(R.id.img_mammon).setOnClickListener(this);
+        findViewById(R.id.img_christmas).setOnClickListener(this);
+        findViewById(R.id.img_cowboy).setOnClickListener(this);
+        findViewById(R.id.img_winter).setOnClickListener(this);
+        findViewById(R.id.img_repair).setOnClickListener(this);
 
         nativeAndroid = new EgretNativeAndroid(this);
         if (!nativeAndroid.checkGlEsVersion()) {
@@ -98,15 +103,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if(v.getId() == R.id.btn_think){
-            nativeAndroid.callExternalInterface("sendToJS", "think");
+            nativeAndroid.callExternalInterface("changeAnimation", "think");
         }else if(v.getId() == R.id.btn_email){
-            nativeAndroid.callExternalInterface("sendToJS", "email");
+            nativeAndroid.callExternalInterface("changeAnimation", "email");
         }else if(v.getId() == R.id.btn_music){
-            nativeAndroid.callExternalInterface("sendToJS", "music");
+            nativeAndroid.callExternalInterface("changeAnimation", "music");
         }else if(v.getId() == R.id.btn_nod){
-            nativeAndroid.callExternalInterface("sendToJS", "nod");
+            nativeAndroid.callExternalInterface("changeAnimation", "nod");
         }else if(v.getId() == R.id.btn_repair){
-            nativeAndroid.callExternalInterface("sendToJS", "repair");
+            nativeAndroid.callExternalInterface("changeAnimation", "repair");
+        }else if(v.getId() == R.id.img_repair){
+            nativeAndroid.callExternalInterface("changeHat", "repair_hat");
+        }else if(v.getId() == R.id.img_christmas){
+            nativeAndroid.callExternalInterface("changeHat", "hat_christmas");
+        }else if(v.getId() == R.id.img_cowboy){
+            nativeAndroid.callExternalInterface("changeHat", "hat_cowboy");
+        }else if(v.getId() == R.id.img_mammon){
+            nativeAndroid.callExternalInterface("changeHat", "hat_mammon");
+        }else if(v.getId() == R.id.img_winter){
+            nativeAndroid.callExternalInterface("changeHat", "hat_winter");
         }
     }
 

@@ -6,20 +6,65 @@
     android:gravity="center"
     android:orientation="horizontal">
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
+    <RelativeLayout
+        android:layout_width="800px"
+        android:layout_height="match_parent">
 
-    <FrameLayout
-        android:id="@+id/fl_animation"
-        android:layout_width="300px"
-        android:layout_height="230px" />
+        <FrameLayout
+            android:id="@+id/fl_animation"
+            android:layout_width="300px"
+            android:layout_height="230px"
+            android:layout_centerInParent="true" />
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
+        <ImageView
+            android:id="@+id/img_mammon"
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:layout_below="@id/fl_animation"
+            android:layout_marginTop="32px"
+            android:layout_marginRight="32px"
+            android:layout_toLeftOf="@id/fl_animation"
+            android:src="@mipmap/hat_mammon" />
+
+        <ImageView
+            android:id="@+id/img_christmas"
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:layout_below="@id/fl_animation"
+            android:layout_marginLeft="120px"
+            android:layout_marginTop="32px"
+            android:layout_toRightOf="@id/img_mammon"
+            android:src="@mipmap/hat_christmas" />
+
+        <ImageView
+            android:id="@+id/img_cowboy"
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:layout_below="@id/fl_animation"
+            android:layout_marginLeft="120px"
+            android:layout_marginTop="32px"
+            android:layout_toRightOf="@id/img_christmas"
+            android:src="@mipmap/hat_cowboy" />
+
+        <ImageView
+            android:id="@+id/img_winter"
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:layout_above="@id/img_cowboy"
+            android:layout_alignRight="@id/img_cowboy"
+            android:layout_marginBottom="32px"
+            android:src="@mipmap/hat_winter" />
+
+        <ImageView
+            android:id="@+id/img_repair"
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:layout_above="@id/img_mammon"
+            android:layout_alignLeft="@id/img_mammon"
+            android:layout_marginBottom="32px"
+            android:src="@mipmap/repair_hat" />
+    </RelativeLayout>
+
 
     <RelativeLayout
         android:layout_width="1000px"
@@ -55,8 +100,8 @@
             android:id="@+id/btn_nod"
             android:layout_width="220px"
             android:layout_height="100px"
-            android:layout_marginTop="30px"
             android:layout_below="@id/btn_think"
+            android:layout_marginTop="30px"
             android:text="点头"
             android:textSize="32px" />
 
@@ -64,9 +109,9 @@
             android:id="@+id/btn_repair"
             android:layout_width="220px"
             android:layout_height="100px"
-            android:layout_marginTop="30px"
             android:layout_below="@id/btn_think"
             android:layout_marginLeft="30px"
+            android:layout_marginTop="30px"
             android:layout_toRightOf="@id/btn_think"
             android:text="维修"
             android:textSize="32px" />
