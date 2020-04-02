@@ -34,7 +34,7 @@
 
         <TextView
             android:id="@+id/tv_alpha"
-            android:layout_width="150px"
+            android:layout_width="wrap_content"
             android:layout_height="70px"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -42,26 +42,28 @@
             android:layout_marginTop="32px"
             android:background="@android:color/holo_green_light"
             android:gravity="center"
-            android:text="alpha"
+            android:padding="12px"
+            android:text="透明度变化"
             android:textColor="@android:color/black"
             android:textSize="32px" />
 
         <TextView
             android:id="@+id/tv_rotate"
-            android:layout_width="150px"
+            android:layout_width="wrap_content"
             android:layout_height="70px"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="32px"
             android:background="@android:color/holo_green_light"
             android:gravity="center"
-            android:text="rotate"
+            android:padding="12px"
+            android:text="角度变化"
             android:textColor="@android:color/black"
             android:textSize="32px" />
 
         <TextView
             android:id="@+id/tv_scale"
-            android:layout_width="150px"
+            android:layout_width="wrap_content"
             android:layout_height="70px"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
@@ -69,37 +71,149 @@
             android:layout_marginRight="32px"
             android:background="@android:color/holo_green_light"
             android:gravity="center"
-            android:text="scale"
+            android:padding="12px"
+            android:text="大小变化"
             android:textColor="@android:color/black"
             android:textSize="32px" />
 
         <TextView
             android:id="@+id/tv_set"
-            android:layout_width="150px"
+            android:layout_width="wrap_content"
             android:layout_height="70px"
-            android:layout_alignParentLeft="true"
             android:layout_below="@id/tv_alpha"
+            android:layout_alignParentLeft="true"
             android:layout_marginLeft="32px"
             android:layout_marginTop="32px"
             android:background="@android:color/holo_green_light"
             android:gravity="center"
+            android:padding="12px"
             android:text="set"
             android:textColor="@android:color/black"
             android:textSize="32px" />
 
         <TextView
             android:id="@+id/tv_translate"
-            android:layout_width="150px"
+            android:layout_width="wrap_content"
             android:layout_height="70px"
             android:layout_below="@id/tv_rotate"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="32px"
             android:background="@android:color/holo_green_light"
             android:gravity="center"
+            android:padding="12px"
             android:text="translate"
             android:textColor="@android:color/black"
             android:textSize="32px" />
 
+
+        <TextView
+            android:id="@+id/tv_interpolator_accelerate_decelerate"
+            android:layout_width="wrap_content"
+            android:layout_height="70px"
+            android:layout_below="@id/tv_alpha"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="32px"
+            android:layout_marginTop="134px"
+            android:background="@android:color/holo_green_light"
+            android:gravity="center"
+            android:padding="12px"
+            android:text="中间快，两边慢"
+            android:textColor="@android:color/black"
+            android:textSize="32px" />
+
+
+        <TextView
+            android:id="@+id/tv_interpolator_accelerate"
+            android:layout_width="wrap_content"
+            android:layout_height="70px"
+            android:layout_below="@id/tv_alpha"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="32px"
+            android:layout_marginTop="134px"
+            android:background="@android:color/holo_green_light"
+            android:gravity="center"
+            android:padding="12px"
+            android:text="前面慢，后边快"
+            android:textColor="@android:color/black"
+            android:textSize="32px" />
+
+
+        <TextView
+            android:id="@+id/tv_interpolator_anticipate"
+            android:layout_width="wrap_content"
+            android:layout_height="70px"
+            android:layout_below="@id/tv_alpha"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="32px"
+            android:layout_marginTop="134px"
+            android:background="@android:color/holo_green_light"
+            android:gravity="center"
+            android:padding="12px"
+            android:text="先后甩，后前甩"
+            android:textColor="@android:color/black"
+            android:textSize="32px" />
+
+
+        <TextView
+            android:id="@+id/tv_interpolator_bounce"
+            android:layout_width="wrap_content"
+            android:layout_height="70px"
+            android:layout_below="@id/tv_alpha"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="32px"
+            android:layout_marginTop="236px"
+            android:background="@android:color/holo_green_light"
+            android:gravity="center"
+            android:padding="12px"
+            android:text="动画结束时弹起"
+            android:textColor="@android:color/black"
+            android:textSize="32px" />
+
+
+        <TextView
+            android:id="@+id/tv_interpolator_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="70px"
+            android:layout_below="@id/tv_alpha"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="236px"
+            android:background="@android:color/holo_green_light"
+            android:gravity="center"
+            android:padding="12px"
+            android:text="常量速率改变"
+            android:textColor="@android:color/black"
+            android:textSize="32px" />
+
+
+        <TextView
+            android:id="@+id/tv_interpolator_overshoot"
+            android:layout_width="wrap_content"
+            android:layout_height="70px"
+            android:layout_below="@id/tv_alpha"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="32px"
+            android:layout_marginTop="236px"
+            android:background="@android:color/holo_green_light"
+            android:gravity="center"
+            android:padding="12px"
+            android:text="先向前甩，后返回"
+            android:textColor="@android:color/black"
+            android:textSize="32px" />
+
+        <TextView
+            android:id="@+id/tv_value_animator"
+            android:layout_width="wrap_content"
+            android:layout_height="70px"
+            android:layout_below="@id/tv_alpha"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="32px"
+            android:layout_marginTop="338px"
+            android:background="@android:color/holo_green_light"
+            android:gravity="center"
+            android:padding="12px"
+            android:text="属性动画--值动画"
+            android:textColor="@android:color/black"
+            android:textSize="32px" />
 
     </RelativeLayout>
 
