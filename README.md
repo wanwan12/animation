@@ -46,7 +46,7 @@ tvOriginal.startAnimation(mAlphaAnimation);
 
 效果如下
 
-![AlphaAnimation gif](gif/tween_alpha.gif)
+![AlphaAnimation gif](https://github.com/wanwan12/animation/raw/orginal/gif/tween_alpha.gif)
 
 
 
@@ -90,7 +90,7 @@ tvOriginal.startAnimation(mScaleAnimation);
 
 效果如下
 
-![AlphaAnimation gif](gif/tween_scale.gif)
+![AlphaAnimation gif](https://github.com/wanwan12/animation/raw/orginal/gif/tween_scale.gif)
 
 
 
@@ -125,7 +125,7 @@ tvOriginal.startAnimation(mTranslateAnimation);
 
 效果如下
 
-![AlphaAnimation gif](gif/tween_translate.gif)
+![AlphaAnimation gif](https://github.com/wanwan12/animation/raw/orginal/gif/tween_translate.gif)
 
 
 
@@ -160,7 +160,7 @@ tvOriginal.startAnimation(mRotateAnimation);
 
 效果如下
 
-![AlphaAnimation gif](gif/tween_rorate.gif)
+![AlphaAnimation gif](https://github.com/wanwan12/animation/raw/orginal/gif/tween_rorate.gif)
 
 
 
@@ -211,7 +211,7 @@ tvOriginal.startAnimation(mSetAnimation);
 
 效果如下
 
-![AlphaAnimation gif](gif/tween_set.gif)
+![AlphaAnimation gif](https://github.com/wanwan12/animation/raw/orginal/gif/tween_set.gif)
 
 
 
@@ -318,7 +318,7 @@ valueAnimator.start();
 
 #### `ValueAnimator`动画效果
 
-![AlphaAnimation gif](gif/value_animator.gif)
+![AlphaAnimation gif](https://github.com/wanwan12/animation/raw/orginal/gif/value_animator.gif)
 
 #### ObjectAnimator 对象动画
 
@@ -367,13 +367,19 @@ valueAnimator.setInterpolator(new BounceInterpolator());
 
 * interpolator_accelerate_decelerate 
 
-![AlphaAnimation gif](gif/interpolator_accelerate_decelerate.gif)
+![AlphaAnimation gif](https://github.com/wanwan12/animation/raw/orginal/gif/interpolator_accelerate_decelerate.gif)
 
 * interpolator_bounce
 
-  ![interpolator_bounce gif](gif/interpolator_bounce.gif)
+  ![interpolator_bounce gif](https://github.com/wanwan12/animation/raw/orginal/gif/interpolator_bounce.gif)
+
+  
 
 * interpolator_overshoot
 
-![interpolator_overshoot gif](gif/interpolator_overshoot.gif)
+![interpolator_overshoot gif](https://github.com/wanwan12/animation/raw/orginal/gif/interpolator_overshoot.gif)
+
+
+
+
 
