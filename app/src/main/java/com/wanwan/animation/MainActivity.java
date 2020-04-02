@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.LENGTH_LONG).show();
             return;
         }
-
+        nativeAndroid.config.preloadPath = "/sdcard/mascot/";
         nativeAndroid.config.showFPS = false;
         nativeAndroid.config.fpsLogTime = 15;
         nativeAndroid.config.disableNativeRender = false;
