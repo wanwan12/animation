@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initPropertyAnimator() {
         valueAnimator = ValueAnimator.ofInt(0, 200, 50, 100);
         valueAnimator.setDuration(1000);
-
+        valueAnimator.setInterpolator(new AnticipateInterpolator());
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
