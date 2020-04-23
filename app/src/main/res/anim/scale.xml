@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--pivotX,pivotY 动画起始点，可以是50，也可以是50%，也可以是50%p-->
+<!--android:fillAfter="true" 保持动画结束的状态 -->
+<!--android:fillAfter="true" 保持动画结束的状态 -->
+<!--android:repeatMode="restart /reverse" 设定回放类型-->
+<!--android:repeatCount="1" 回放次数-->
+<scale xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromXScale="0.0"
+    android:toXScale="1.4"
+    android:fromYScale="0.0"
+    android:toYScale="1.4"
+    android:pivotX="50"
+    android:pivotY="50"
+    android:fillAfter="true"
+    android:repeatMode="reverse"
+    android:repeatCount="2"
+    android:duration="700" />
